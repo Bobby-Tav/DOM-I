@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM \nIs \nAwesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -40,3 +40,31 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//My work
+
+const header = document.querySelector('header');
+const navi = header.querySelector('nav');
+const docTitle = document.querySelector('title');
+const cta = document.querySelector('cta');
+const h1Title = document.querySelector('h1')
+const photo = document.querySelector('#cta-img')
+
+//title
+docTitle.textContent = "Great Idea!";
+
+//Nav
+navi.children[0].textContent = siteContent["nav"]["nav-item-1"];
+navi.children[1].textContent = siteContent["nav"]['nav-item-2'];
+navi.children[2].textContent = siteContent["nav"]['nav-item-3'];
+navi.children[3].textContent = siteContent["nav"]['nav-item-4'];
+navi.children[4].textContent = siteContent["nav"]['nav-item-5'];
+navi.children[5].textContent = siteContent["nav"]['nav-item-6'];
+
+//h1
+h1Title.innerText = siteContent['cta']['h1'];
+
+//photo
+photo.src = siteContent["cta"]["img-src"];
+
+
