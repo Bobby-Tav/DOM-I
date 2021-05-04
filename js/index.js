@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street \nSomewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -50,6 +50,21 @@ const cta = document.querySelector('cta');
 const h1Title = document.querySelector('h1')
 const photo = document.querySelector('#cta-img')
 
+const butt = document.querySelector('button');
+const topContent1 = document.querySelector(".text-content:nth-of-type(1)");
+const topContent2 = document.querySelector(".text-content:nth-of-type(2)");
+const topContent3 = document.querySelector(".bottom-content div:nth-of-type(1)");
+const topContent4 = document.querySelector(".bottom-content div:nth-of-type(2)");
+const topContent5 = document.querySelector(".bottom-content div:nth-of-type(3)");
+const middleImg = document.querySelector("#middle-img");
+
+const contact = document.querySelector(".contact"); 
+
+const footer = document.querySelector("footer p");
+
+
+
+
 //title
 docTitle.textContent = "Great Idea!";
 
@@ -67,4 +82,39 @@ h1Title.innerText = siteContent['cta']['h1'];
 //photo
 photo.src = siteContent["cta"]["img-src"];
 
+//Button goes here i guess
+butt.textContent = siteContent["cta"]["button"];
 
+
+//Top contact
+topContent1.children[0].textContent = siteContent["main-content"]["features-h4"];
+topContent1.children[1].textContent = siteContent["main-content"]["features-content"];
+
+topContent2.children[0].textContent = siteContent["main-content"]["about-h4"];
+topContent2.children[1].textContent = siteContent["main-content"]["about-content"];
+
+
+//bottom Content
+topContent3.children[0].textContent = siteContent["main-content"]["services-h4"];
+topContent3.children[1].textContent = siteContent["main-content"]["services-content"];
+
+
+topContent4.children[0].textContent = siteContent["main-content"]["product-h4"];
+topContent4.children[1].textContent = siteContent["main-content"]["product-content"];
+
+topContent5.children[0].textContent = siteContent["main-content"]["vision-h4"];
+topContent5.children[1].textContent = siteContent["main-content"]["vision-content"];
+
+
+middleImg.src = siteContent["main-content"]["middle-img-src"];
+
+//contact
+
+contact.children[0].innerText = siteContent["contact"]["contact-h4"];
+contact.children[1].innerText = siteContent["contact"]["address"];
+contact.children[2].innerText = siteContent["contact"]["phone"];
+contact.children[3].innerText = siteContent["contact"]["email"];
+
+//Footer
+
+footer.innerText = siteContent["footer"]["copyright"];
